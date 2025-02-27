@@ -1,5 +1,5 @@
 class CalcController < ApplicationController
-  def square
-    render({ :template => "calc_templates/square"})
+  def square_form
+    render({ :template => "calc_templates/square_form"})
   end
 end
