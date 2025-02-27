@@ -3,6 +3,8 @@ class CalcController < ApplicationController
     render({ :template => "calc_templates/square_form"})
   end
   def square
+    @input = params.fetch("number")
+    @output = @input.to_f ** 2
     render({ :template => "calc_templates/square"})
   end
 
@@ -10,6 +12,8 @@ class CalcController < ApplicationController
     render({ :template => "calc_templates/sqrt_form"})
   end
   def sqrt
+    @input = params.fetch("number")
+    @output = @input.to_f ** 0.5
     render({ :template => "calc_templates/sqrt"})
   end
 
